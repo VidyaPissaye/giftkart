@@ -1,4 +1,8 @@
 Giftkart::Application.routes.draw do
+  get "welcome/flowers"
+
+  get "welcome/chocolates"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
