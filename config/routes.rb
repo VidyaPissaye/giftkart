@@ -1,4 +1,6 @@
 Giftkart::Application.routes.draw do
+  get "welcomes/home"
+
   get "welcomes/flowers"
 
   get "welcomes/chocolates"

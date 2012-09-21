@@ -2,6 +2,20 @@ require 'spec_helper'
 
 describe "Welcome" do
 
+  describe "Home" do
+
+    it "should have the h1 'GiftKart'" do
+      visit '/welcomes/home'
+      page.should have_selector('h1', :text => 'GiftKart')
+    end
+
+
+    it "should not have a custom page title" do
+      visit '/welcomes/home'
+      page.should_not have_selector('title', :text => '| Home')
+    end
+  end
+
   describe "Flowers" do
 
     it "should have the h1 'GiftKart'" do
@@ -30,4 +44,6 @@ describe "Welcome" do
       page.should_not have_selector('title', :text => '| Chocolates')
     end
   end
+
+
 end

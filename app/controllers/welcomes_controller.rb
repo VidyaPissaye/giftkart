@@ -1,4 +1,8 @@
 class WelcomesController < ApplicationController
+
+  def home
+  end
+
   def flowers
   end
 
