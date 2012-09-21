@@ -30,12 +30,14 @@ describe "Welcome" do
 
   describe "Contact page" do
     before {visit '/welcomes/contact'}
-    it {should have_selector('h1', text: 'Contact') }
+    it {should have_selector('h1', text: 'GiftKart') }
+    it {should_not have_selector('title', :text => '| Contact') }
   end
 
-  describe "About Us" do
-    before {visit '/welcomes/about'}
-    it {should have_selector('h1', text: 'About Us') }
+  describe "Sign in" do
+    before {visit '/welcomes/signin'}
+    it {should have_selector('h1', text: 'GiftKart') }
+    it {should_not have_selector('title', :text => '| About Us') }
   end
 
 end

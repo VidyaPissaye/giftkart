@@ -1,6 +1,8 @@
 Giftkart::Application.routes.draw do
 
 
+  get "users/new"
+
   get "welcomes/home"
 
   get "welcomes/flowers"
@@ -9,7 +11,7 @@ Giftkart::Application.routes.draw do
 
   get "welcomes/contact"
 
-  get "welcomes/about"
+  get "welcomes/signin"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -12,6 +12,6 @@ class WelcomesController < ApplicationController
   def contact
   end
 
-  def about
+  def signin
   end
 end
