@@ -1,6 +1,8 @@
 Giftkart::Application.routes.draw do
 
 
+  get "orders/checkout"
+
   get "users/new"
 
   get "welcomes/home"
@@ -13,7 +15,7 @@ Giftkart::Application.routes.draw do
 
   get "welcomes/signin"
 
-  # The priority is based upon order of creation:
+  # The priority is based upon orders of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
