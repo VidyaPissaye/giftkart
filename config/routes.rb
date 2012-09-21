@@ -1,11 +1,15 @@
 Giftkart::Application.routes.draw do
 
-  root to: 'welcomes#home'
 
-  match '/home',  to: "welcomes#home"
-  match '/flowers',  to: "welcomes#flowers"
-  match '/chocolates',  to: "welcomes#chocolates"
-  match '/contact',  to: "welcomes#contact"
+  get "welcomes/home"
+
+  get "welcomes/flowers"
+
+  get "welcomes/chocolates"
+
+  get "welcomes/contact"
+
+  get "welcomes/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
