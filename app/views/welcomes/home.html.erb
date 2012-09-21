@@ -1,11 +1,14 @@
 <div class="center hero-unit">
-  <h1>GiftKart</h1>
+  <h1>Welcome to GiftKart!</h1>
 
   <h2>
-    This is the home page of the GiftKart website.
+    Choose from a world of Flowers and Chocolates to gift.
   </h2>
-
+  <%= link_to image_tag("Flowers.jpg", alt: "Flowers"), '/Vidya/rails_projects/giftkart/' %>
+  <%= link_to image_tag("Chocolates.jpg", alt: "Chocolates"), 'http://rubyonrails.org/' %>
+  <%= link_to "Gift Flowers!", '#', class: "btn btn-large btn-primary" %>
+  <%= link_to "Gift Chocolates!", '#', class: "btn btn-large btn-primary" %>
 </div>
 
-<%= link_to image_tag("Home.jpg", alt: "Home"), 'http://rubyonrails.org/' %>
+
 

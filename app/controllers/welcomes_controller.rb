@@ -8,4 +8,7 @@ class WelcomesController < ApplicationController
 
   def chocolates
   end
+
+  def contact
+  end
 end
