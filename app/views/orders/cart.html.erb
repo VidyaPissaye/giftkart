@@ -1,0 +1,4 @@
+<% provide(:title, @user.name) %>
+<h1> Hello <%= @user.name %></h1>
+<h2> You picked <%= @item %> to gift </h2>
+<%= link_to "Continue", checkout_orders_path + "?item=" + @item, class: "btn btn-large btn-primary" %>

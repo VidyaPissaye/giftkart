@@ -1,12 +1,13 @@
 Giftkart::Application.routes.draw do
 
   resources :users
+  resources :orders do
+    get 'checkout', :on => :collection
+  end
 
-  root to: 'static_pages#home'
+  root to: 'welcomes#home'
 
   match '/signup',  to: 'users#new'
-
-  get "orders/checkout"
 
   get "welcomes/home"
 

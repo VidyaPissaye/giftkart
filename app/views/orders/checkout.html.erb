@@ -1,2 +1,36 @@
-<h1>Order</h1>
-<p> Place your order and checkout </p>
+<% provide(:title, 'Your Order') %>
+
+<div id="your_order">
+
+    <h1>Your Order</h1>
+
+    <div class="row">
+      <div class="span6 offset3">
+        <div>
+          Item: <%= @order.item %>
+        </div>
+        <br />
+        <div>
+          Price: <%= @order.price %> $
+        </div>
+        <br />
+        <%= form_for @order, :remote => true do |f| %>
+            <%=  f.hidden_field :item, :value => @order.item  %>
+
+            <%= f.hidden_field :price, :value => @order.price %>
+
+            <%= f.label :sender %>
+            <%= f.text_field :sender %>
+
+            <%= f.label :recipient %>
+            <%= f.text_field :recipient %>
+
+            <%= f.submit "Place Order", class: "btn btn-large btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+</div>
+
+<div>
+  <h1 id="order_status"></h1>
+</div>
